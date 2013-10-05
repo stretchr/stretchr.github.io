@@ -10,10 +10,23 @@ body {
 a {
 	color:#428bca;
 }
+
+/*------- HEADER --------*/
+
 #header {
 	text-align:center;
-	background:#f1f1f1;
-	min-height:100px;
+	background:#f1f1f1 url(../img/header1.jpg) no-repeat center center;
+	background-size: cover;
+	min-height:150px;
+	padding:200px 0;
+}
+
+#header .header-bottom {
+	position:absolute;
+	bottom:0;
+	background: url(../img/w-page-top.png) repeat-x center bottom;
+	height:50px;
+	width:100%;
 }
 
 #header h2 {
@@ -24,19 +37,24 @@ a {
 	color:#383838;
 }
 
+/*------------ FEATURES -------------*/
+
 #features {
-	background:#303030;
+	background:#303030 url(../img/feature-bg.png);
 	color:#f1f1f1;
 }
 
-#features .feature {
-	background:#383838;
-	padding:15px;
+#features .feature:hover {
+	background: rgba(255, 255, 255, .5);
 	border-radius:10px;
-	border: 1px solid #202020;
+}
+
+#features .feature {
+	padding:15px;
+	color:#000;
 	min-height: 200px;
-	margin:10px 0;
-	box-shadow: 0 0 5px #202020;
+	text-align:center;
+	margin: 10px 0;
 }
 
 #footer {
@@ -47,11 +65,6 @@ a {
 #sdks {
 	background:#e1e1e1;
 	color:#303030;
-}
-
-h2 {
-	color:#428bca;
-	text-shadow: 0 1px 1px #777;
 }
 
 #greymatter {
@@ -67,24 +80,37 @@ h2 {
 	width:100%;
 }
 
-.feature h3 {
-	margin:5px 0;
-	color:#999;
-	text-shadow: 0 1px 1px #101010;
-}
-
 .slice {
+	margin-top:-36px;
 	padding:100px 0;
 	min-height:500px;
+	position:relative;
+}
+
+.slice-bottom {
+	height:20px;
+	position:absolute;
+	bottom:0;
+	width:100%;
+	background: url(../img/shadow-btm.png) no-repeat bottom center;
 }
 
 .section-highlight {
-	padding:20px;
 	text-align:center;
 }
 
+.section-highlight h2 {
+	margin:40px 0;
+}
+
 .section-highlight .title {
-	background: url(../img/feature-icon.png);
-	height:72px;
+	background: url(../img/feature-icon.png) 50% 50%;
+	line-height:72px;
+	padding:0;
+	margin:0;
+	color:#fff;
+	font-size:34px;
+	position:relative;
+	z-index:1000;
 }
 
