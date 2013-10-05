@@ -19,21 +19,24 @@ a {
 /*------- HEADER --------*/
 
 #header {
-	text-align:center;
 	background:#f1f1f1 url(../img/header1.jpg) no-repeat center center;
 	background-size: cover;
-	min-height:150px;
-	padding:200px 0;
 }
 
 #header .header-bottom {
-	position:absolute;
 	bottom:0;
 	background: url(../img/w-page-top.png) repeat-x center bottom;
 	height:50px;
 	width:100%;
 }
 
+#header .header-inner {
+  height: 300px;
+}
+#header .header-inner .container {
+  padding-top: 20px;
+  text-align: left;
+}
 #header h2 {
 	color:#777;
 }
@@ -41,6 +44,22 @@ a {
 #header h2 .rotator {
 	color:#383838;
 }
+
+h1 {
+  font-size: 51px;
+  letter-spacing: -0.05em;
+  padding-left: 1.5em;
+}
+#header h2 {
+  text-align: right;
+}
+.stretchr-logo {
+  height: 1em;
+  vertical-align: bottom;
+  position: absolute;
+  margin-left: -1.5em;
+}
+
 
 /*------------ FEATURES -------------*/
 
@@ -73,10 +92,6 @@ a {
 }
 
 #greymatter .panel img {
-	width:100%;
-}
-
-.logo {
 	width:100%;
 }
 
