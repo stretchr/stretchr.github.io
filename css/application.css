@@ -1,6 +1,6 @@
 body {
 	font-size:16px;
-	line-height:25px;
+	line-height:27px;
 	font-family: "Open Sans", sans-serif;
 }
 
@@ -78,7 +78,11 @@ h1 {
 
 #footer {
 	background:#303030;
-	color:#f1f1f1;
+	color:#bbb;
+}
+
+#footer .copyright {
+  color: #888;
 }
 
 #sdks {
@@ -127,8 +131,8 @@ pre {
 	font-size:34px;
 }
 
-@media only screen 
-and (min-device-width : 320px) 
+@media only screen
+and (min-device-width : 320px)
 and (max-device-width : 568px) {
 	#header h1, #header h2 {
 		text-align:center;
