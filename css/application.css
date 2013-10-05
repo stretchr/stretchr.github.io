@@ -4,9 +4,13 @@ body {
 	font-family: "Open Sans", sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: "Open Sans", sans-serif;
+}
+
 .highlight {
 	font-family: 'Indie Flower', cursive;
-}
+, .h1, .h2, .h3, .h4, .h5, .h6}
 
 a {
 	color:#428bca;
