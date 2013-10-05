@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Stretchr</title>
+		<link rel="stylesheet" href="/css/bootstrap.min.css">
+		<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="/css/application.css">
+	</head>
+	<body>
+		<div class="slice" id="header">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8 col-sm-offset-2">
+						<img src="/img/stretchr-logo.png" class="logo">
+						<h2><span class="rotator typer" data-typer-targets="DBA, NoSQL, Magic, Database, Admin, Backend">Backend</span> as a service</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section-highlight">
+			<h3>The scalable restful data store you need</h3>
+			<div class='title'>Features</div>
+		</div>	
+		<div class="slice" id="features">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="feature">
+							<h3><span class="glyphicon glyphicon-book"></span> Intelligent</h3>
+							<p>Data is intelligently optimized on your behalf.  Indexes, Sharding and even selecting the right database for the job is all automatic.</p>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="feature">
+							<h3><span class="glyphicon glyphicon-tower"></span> Enterprise Ready</h3>
+							<p>Host it yourself or let us do it for you.  White labeling options available.</p>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="feature">
+							<h3><span class="glyphicon glyphicon-cog"></span> Expandable</h3>
+							<p>Build your own apps or take advantage of a growing collection of third party ones.  You control their data access.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="feature">
+							<h3><span class="glyphicon glyphicon-cloud"></span> Schema-less</h3>
+							<p>Don't worry about locking your data into a schema, let us figure one out for you as you grow.</p>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="feature">
+							<h3><span class="glyphicon glyphicon-lock"></span> Security</h3>
+							<p>Stretchr has permissions and users built right into the core, allowing fine grained control over data access</p>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="feature">
+							<h3><span class="glyphicon glyphicon-globe"></span> Universal SDKs</h3>
+							<p>Select any one of our growing list of SDKs.  <a href="https://github.com/stretchr">Check them out here</a>.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slice" id="sdks">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6">
+						<h2>World class SDKs</h2>
+						<p>Stretchr SDKs are open source and designed to provide powerful access to the stretchr featureset while feeling <strong>familiar to developers in any language</strong>.  Our most active SDKs are <a href="https://github.com/stretchr/sdk-ruby">ruby</a>, <a href="https://github.com/stretchr/sdk-js">javascript</a> and <a href="https://github.com/stretchr/sdk-go">golang</a> - but we have many more options available on <a href="https://github.com/stretchr">github</a>.
+					</div>
+					<div class="col-sm-6">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<ul class="nav nav-pills">
+									<li class="active"><a href="#javascript" data-toggle="tab">Javascript</a></li>
+									<li><a href="#ruby" data-toggle="tab">Ruby</a></li>
+									<li><a href="#golang" data-toggle="tab">GoLang</a></li>
+									<li><a href="#http" data-toggle="tab">HTTP</a></li>
+								</ul>
+							</div>
+							<div class="panel-body">
+								<div class="tab-content">
+									<div class="tab-pane active" id="javascript">
+<pre>
+stretchr = Stretchr.NewSession("project.company", "public-key", "private-key");
+
+stretchr.at("people/1").read({
+	done: function(person){
+		alert("Hello " + person.name);
+	}
+});
+</pre>
+									</div>
+									<div class="tab-pane" id="ruby">
+<pre>
+stretchr = Stretchr::Client.new(project: "project.company", private_key: "private_key", public_key: "public_key")
+
+books = stretchr.people(1).books.get
+</pre>
+									</div>
+									<div class="tab-pane" id="golang">
+<pre>
+Stretchr := stretchr.NewSession("{project}", "{public-key}", "{private-key}")
+
+resource, err := Stretchr.At("people/123").ReadOne()
+
+log.Printf("Just loaded %s who is %g years old.", resource.Get("name"), resource.Get("age"))
+</pre>
+									</div>
+									<div class="tab-pane" id="http">
+										<p>Stretchr's beautiful Restful API allows easy development in any languages, even those we don't yet support through native SDK's.</p>
+<pre>
+# Reading ressources
+GET https://project.company.stretchr.com/api/v1.1/people/1
+
+# Creating resources
+POST https://project.company.stretchr.com/api/v1.1/people
+</pre>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slice" id="greymatter">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="carousel slide">
+							<ol class="carousel-indicators">
+								<li class="active" data-target="#greymatter-slides" data-slide-to="0"></li>
+							</ol>
+							<div class="carousel-inner">
+								<div class="item active">
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											GreyMatter recognizes usage patterns and optimizes your data
+										</div>
+										<img src="/img/greymatter-chart.png" alt="">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<h2>GreyMatter</h2>
+						<p>
+							Stretchr's breakthrough GreyMatter artificial intelligence engine monitors, and proactively optimizes high volume data flow in a schema-less environment through an automated, self-organizing capability that responds to the type of data being stored, how users interact with it, and how future usage might develop.
+						</p>
+						<p>
+							Stretchr's automated reorganization and optimization engine allows it to <strong>provide the highest possible performance at all times.</strong>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slice" id="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6">
+						<p>
+							Stretchr, Inc. is a privately-held company developing intelligent data management platform for NoSQL environments.
+						</p>
+						<p>
+							To learn more, or to request early access, fill out the form.
+						</p>
+						<div class="row">
+						<!-- Begin MailChimp Signup Form -->
+							<form action="http://stretchr.us7.list-manage.com/subscribe/post?u=fc22c7fd9375424e66f835567&amp;id=dbbb5921f5" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-vertical" target="_blank" novalidate>
+								<div class="mc-field-group col-sm-7">
+									<input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL" placeholder="Email address...">
+								</div>
+								<div class="submit-container col-sm-5">
+									<input type="submit" value="Join the Mailing List" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-default btn-primary btn-block">
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="pull-right">
+							&copy 2013 Stretchr, Inc.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="/js/services/jquery-2.0.min.js"></script>
+		<script src="/js/services/bootstrap.min.js"></script>
+		<script src="/js/services/jquery.typer.js"></script>
+
+		<script src="/js/application.js"></script>
+
+	</body>
+</html>
