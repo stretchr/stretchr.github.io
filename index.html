@@ -22,9 +22,6 @@
       </div>
 			<div class="header-bottom"></div>
 		</div>
-		<div class="section-highlight">
-			<h3 class="title">Features</h3>
-		</div>
 		<div class="slice" id="features">
 			<div class="container">
 				<div class="row">
@@ -76,10 +73,6 @@
 			</div>
 			<div class="slice-bottom"></div>
 		</div>
-		<div class="section-highlight">
-			<h2>Develop in the languages you love</h2>
-			<h3 class="title">SDKs</h3>
-		</div>
 		<div class="slice" id="sdks">
 			<div class="container">
 				<div class="row">
@@ -91,50 +84,45 @@
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<ul class="nav nav-pills">
-									<li class="active"><a href="#javascript" data-toggle="tab">Javascript</a></li>
+									<li class="active"><a href="#javascript" data-toggle="tab">JavaScript</a></li>
 									<li><a href="#ruby" data-toggle="tab">Ruby</a></li>
-									<li><a href="#golang" data-toggle="tab">GoLang</a></li>
-									<li><a href="#http" data-toggle="tab">HTTP</a></li>
+									<li><a href="#golang" data-toggle="tab">Go</a></li>
+									<li><a href="#http" data-toggle="tab">REST</a></li>
 								</ul>
 							</div>
 							<div class="panel-body">
 								<div class="tab-content">
 									<div class="tab-pane active" id="javascript">
-<pre>
-stretchr = Stretchr.NewSession("project.company", "public-key", "private-key");
+<pre>stretchr = new Stretchr.Client("project.company", "key");
 
 stretchr.at("people/1").read({
-	done: function(person){
-		alert("Hello " + person.name);
+	success: function(response){
+		alert("Hello " + response.resource().data("name"));
 	}
-});
-</pre>
+});</pre>
 									</div>
 									<div class="tab-pane" id="ruby">
-<pre>
-stretchr = Stretchr::Client.new(project: "project.company", private_key: "private_key", public_key: "public_key")
+<pre>stretchr = Stretchr::Client.new(
+  project: "project.company",
+  key: "key")
 
-books = stretchr.people(1).books.get
-</pre>
+# GET /people/1/books
+books = stretchr.people(1).books.get</pre>
 									</div>
 									<div class="tab-pane" id="golang">
-<pre>
-Stretchr := stretchr.NewSession("{project}", "{public-key}", "{private-key}")
+<pre>Stretchr := stretchr.NewSession("{project}", "{key}");
 
-resource, err := Stretchr.At("people/123").ReadOne()
+resource, _ := Stretchr.At("people/123").ReadOne()
 
-log.Printf("Just loaded %s who is %g years old.", resource.Get("name"), resource.Get("age"))
-</pre>
+log.Printf("Just loaded %s who is %g years old.", resource.Get("name"), resource.Get("age"))</pre>
 									</div>
 									<div class="tab-pane" id="http">
-										<p>Stretchr's beautiful Restful API allows easy development in any languages, even those we don't yet support through native SDK's.</p>
-<pre>
-# Reading ressources
+										<p>Stretchr's Restful API allows easy development in any languages, even those we don't yet support through native SDK's.</p>
+<pre># Reading ressources
 GET https://project.company.stretchr.com/api/v1.1/people/1
 
 # Creating resources
-POST https://project.company.stretchr.com/api/v1.1/people
-</pre>
+POST https://project.company.stretchr.com/api/v1.1/people</pre>
 									</div>
 								</div>
 							</div>

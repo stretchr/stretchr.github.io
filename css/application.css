@@ -19,7 +19,7 @@ a {
 /*------- HEADER --------*/
 
 #header {
-	background:#f1f1f1 url(../img/header1.jpg) no-repeat center center;
+	background: url(../img/header1.jpg) no-repeat center center;
 	background-size: cover;
 }
 
@@ -31,7 +31,7 @@ a {
 }
 
 #header .header-inner {
-  height: 300px;
+  height: 400px;
 }
 #header .header-inner .container {
   padding-top: 20px;
@@ -46,7 +46,7 @@ a {
 }
 
 h1 {
-  font-size: 51px;
+  font-size: 32px;
   letter-spacing: -0.05em;
   padding-left: 1.5em;
 }
@@ -54,7 +54,7 @@ h1 {
   text-align: right;
 }
 .stretchr-logo {
-  height: 1em;
+  height: 1.05em;
   vertical-align: bottom;
   position: absolute;
   margin-left: -1.5em;
@@ -64,8 +64,8 @@ h1 {
 /*------------ FEATURES -------------*/
 
 #features {
-	background:#303030 url(../img/feature-bg.png);
 	color:#f1f1f1;
+  padding-top: 10px;
 }
 
 #features .feature {
@@ -82,12 +82,11 @@ h1 {
 }
 
 #sdks {
-	background:#e1e1e1;
+	background:#efefef;
 	color:#303030;
 }
 
 #greymatter {
-	background: #d1d1d1;
 	color:#303030;
 }
 
@@ -95,10 +94,13 @@ h1 {
 	width:100%;
 }
 
+pre {
+  font-size: 0.6em;
+}
+
 .slice {
 	margin-top:-10px;
-	padding:100px 0;
-	min-height:500px;
+	padding:50px 0;
 	position:relative;
 }
 
