@@ -127,3 +127,11 @@ pre {
 	font-size:34px;
 }
 
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) {
+	#header h1, #header h2 {
+		text-align:center;
+	}
+}
+
