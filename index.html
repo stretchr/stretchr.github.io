@@ -98,9 +98,9 @@
 <pre>stretchr = new Stretchr.Client("project.company", "key");
 
 stretchr.at("people/1").read({
-	success: function(response){
-		alert("Hello " + response.resource().data("name"));
-	}
+  success: function(response){
+    alert("Hello " + response.resource().data("name"));
+  }
 });</pre>
 									</div>
 									<div class="tab-pane" id="ruby">
@@ -112,8 +112,10 @@ stretchr.at("people/1").read({
 books = stretchr.people(1).books.get</pre>
 									</div>
 									<div class="tab-pane" id="golang">
-<pre>Stretchr := stretchr.NewSession("{project}", "{key}");
+<pre>// make a session
+Stretchr := stretchr.NewSession("{project}", "{key}");
 
+// read a resource
 resource, _ := Stretchr.At("people/123").ReadOne()
 
 log.Printf("Just loaded %s who is %g years old.", resource.Get("name"), resource.Get("age"))</pre>
