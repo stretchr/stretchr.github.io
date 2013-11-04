@@ -76,6 +76,13 @@ h1 {
 	margin: 10px 0;
 }
 
+#features .action {
+	padding-top: 10px;
+	color:#000;
+	font-size: 1.7em;
+	text-align: center;
+}
+
 #footer {
 	background:#303030;
 	color:#bbb;
