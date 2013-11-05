@@ -25,7 +25,7 @@ a {
 
 #header .header-bottom {
 	bottom:0;
-	background: url(../img/w-page-top.png) repeat-x center bottom;
+	background: url(../img/w-page-top-dark.png) repeat-x center bottom;
 	height:50px;
 	width:100%;
 }
@@ -60,6 +60,18 @@ h1 {
   margin-left: -1.5em;
 }
 
+/*-------- CALL TO ACTION ----------*/
+#call-to-action {
+	background:#303030;
+	color:#fff;
+	padding-top:20px;
+	padding-bottom:40px;
+}
+
+.call-to-action-text {
+	text-align:right;
+}
+
 
 /*------------ FEATURES -------------*/
 
@@ -74,6 +86,13 @@ h1 {
 	min-height: 200px;
 	text-align:center;
 	margin: 10px 0;
+}
+
+#features .action {
+	padding-top: 10px;
+	color:#000;
+	font-size: 1.7em;
+	text-align: center;
 }
 
 #footer {
