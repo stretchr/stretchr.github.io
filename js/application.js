@@ -3,6 +3,10 @@ $(function() {
 	$.typer.options.clearDelay = 750;
 	$.typer.options.typeSpeed = 100;
 	$(".typer").typer({
-    "primaryColor": "red"
-  });
+    	"primaryColor": "red"
+  	});
+
+  	githubStars("stretchr", function(stars) {
+  		$(".github-stars").html(stars);
+  	});
 });
