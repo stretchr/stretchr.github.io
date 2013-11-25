@@ -37,6 +37,7 @@ a {
   padding-top: 20px;
   text-align: left;
 }
+
 #header h2 {
 	color:#777;
 }
@@ -50,9 +51,26 @@ h1 {
   letter-spacing: -0.05em;
   padding-left: 1.5em;
 }
+
 #header h2 {
   text-align: right;
 }
+
+#header h3 {
+	text-align:center;
+	font-size:3.5em;
+	margin-top:1.5em;
+	text-shadow: 0 0 2px #fff;
+	font-weight:bolder;
+}
+
+#header h4 {
+	text-align:center;
+	font-size:2.5em;
+	text-shadow: 0 0 2px #fff;
+	font-weight:bold;
+}
+
 .stretchr-logo {
   height: 1.05em;
   vertical-align: bottom;
@@ -161,6 +179,24 @@ and (min-device-width : 320px)
 and (max-device-width : 568px) {
 	#header h1, #header h2 {
 		text-align:center;
+	}
+
+	#header h3 {
+		font-size:2em;
+		text-shadow: none;
+		margin:0;
+	}
+
+	#header h4 {
+		font-size:1.5em;
+		text-shadow: none;
+	}
+
+	#header .header-text {
+		background: rgba(0, 0, 0, .5);
+		color:#fff;
+		padding:20px 0;
+		margin-top:20px;
 	}
 }
 
