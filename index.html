@@ -138,13 +138,13 @@
 							<div class="panel-body">
 								<div class="tab-content">
 									<div class="tab-pane active" id="javascript">
-										<pre>stretchr = new Stretchr.Client("project.company", "key");
+<pre>stretchr = new Stretchr.Client("project.company", "key");
 
-											stretchr.at("people/1").read({
-											success: function(response){
-											alert("Hello " + response.resource().data("name"));
-										}
-									});</pre>
+	stretchr.at("people/1").read({
+		success: function(response){
+		alert("Hello " + response.resource().data("name"));
+	}
+});</pre>
 								</div>
 								<div class="tab-pane" id="ruby">
 									<pre>stretchr = Stretchr::Client.new(
