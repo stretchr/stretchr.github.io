@@ -147,29 +147,29 @@
 });</pre>
 								</div>
 								<div class="tab-pane" id="ruby">
-									<pre>stretchr = Stretchr::Client.new(
-										project: "project.company",
-										key: "key")
+<pre>stretchr = Stretchr::Client.new(
+	project: "project.company",
+	key: "key")
 
-										# GET /people/1/books
-										books = stretchr.people(1).books.get</pre>
-									</div>
+	# GET /people/1/books
+	books = stretchr.people(1).books.get</pre>
+								</div>
 									<div class="tab-pane" id="golang">
-										<pre>// make a session
-											Stretchr := stretchr.NewSession("{project}", "{key}");
+<pre>// make a session
+Stretchr := stretchr.NewSession("{project}", "{key}");
 
-											// read a resource
-											resource, _ := Stretchr.At("people/123").ReadOne()
+// read a resource
+resource, _ := Stretchr.At("people/123").ReadOne()
 
-											log.Printf("Just loaded %s who is %g years old.", resource.Get("name"), resource.Get("age"))</pre>
+log.Printf("Just loaded %s who is %g years old.", resource.Get("name"), resource.Get("age"))</pre>
 										</div>
 										<div class="tab-pane" id="http">
 											<p>Stretchr's RESTful API allows easy development in any language, even those we don't yet support through native SDKs.</p>
-											<pre># Reading ressources
-												GET https://project.company.stretchr.com/api/v1.1/people/1
+<pre># Reading ressources
+GET https://project.company.stretchr.com/api/v1.1/people/1
 
-												# Creating resources
-												POST https://project.company.stretchr.com/api/v1.1/people</pre>
+# Creating resources
+POST https://project.company.stretchr.com/api/v1.1/people</pre>
 											</div>
 										</div>
 									</div>
