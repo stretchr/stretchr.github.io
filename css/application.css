@@ -124,7 +124,7 @@ h1 {
 }
 
 #sdks {
-	background:#fff;
+	background:#f1f1f1;
 	color:#303030;
 }
 
@@ -196,6 +196,99 @@ pre {
 	color:#777;
 }
 
+/*----- animations -------*/
+
+.permissions-animation img {
+	position:absolute;
+	transition:All 1s;
+	-webkit-transition:All 1s;
+	-moz-transition:All 1s;
+	-o-transition:All 1s;
+	top:0;
+	right:50px;
+	width:400px;
+}
+
+.animation {
+	transition:All 1s;
+	-webkit-transition:All 1s;
+	-moz-transition:All 1s;
+	-o-transition:All 1s;
+}
+
+.permissions-animation .permissions-4{
+	transform: rotate(-100deg);
+	-webkit-transform: rotate(-100deg);
+	-moz-transform: rotate(-100deg);
+}
+
+.permissions-animation .permissions-2{
+	transform: rotate(88deg);
+	-webkit-transform: rotate(88deg);
+	-moz-transform: rotate(88deg);
+}
+.permissions-animation .permissions-3{
+	transform: rotate(-65deg);
+	-webkit-transform: rotate(-65deg);
+	-moz-transform: rotate(-65deg);
+}
+
+.permissions-animation.active img {
+	transform: rotate(0deg);
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+}
+
+/*word drop*/
+
+.nesting-animation {
+	padding-top:20px;
+}
+.collection, .collection-id {
+	font-size: 22px;
+	line-height:35px;
+	font-weight:bolder;
+}
+
+.level-1, .level-2 {
+	color: #00a550;
+}
+
+.level-3, .level-4, .level-6, .level-7 {
+	color: #652c90;
+}
+
+.level-5, .level-8, .level-9, .level-10 {
+	color: #ec008b;
+}
+
+.active.level-2 {
+	margin-left: 15%;
+}
+
+.active.level-3 {
+	margin-left: 30%
+}
+
+.active.level-4 {
+	margin-left: 45%;
+}
+
+.active.level-5 {
+	margin-left: 60%;
+}
+
+.active.level-7 {
+	margin-left:15%;
+}
+
+.active.level-8 {
+	margin-left:30%;
+}
+
+.active.level-10 {
+	margin-left:15%;
+}
 /*---- FOOTER ----*/
 
 .copyright {

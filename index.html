@@ -21,7 +21,7 @@
 				<div class="row">
 					<div class="col-sm-12 header-text">
 						<h3>Ship Products Faster</h3>
-						<h4>Drastically simplified <span class="rotator typer" data-typer-targets="dashboard, mobile app, backend, third party, internal, support app" data-primaryColor="#ffffff">big data app</span> development in a NoSQL environment</h4>
+						<h4>Radically simplified <span class="rotator typer" data-typer-targets="dashboard, mobile app, backend, third party, internal, support app" data-primaryColor="#ffffff">big data app</span> development in a NoSQL environment</h4>
 					</div>
 				</div>
 				<div class="row">
@@ -73,6 +73,139 @@
 			</div>
 		</div>
 	</div>
+	<div class="slice" id="sdks">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					<h2>Start developing in minutes</h2>
+					<p>Our open source SDKs in most of today's popular languages and frameworks let you get up and running in minutes.  Just generate an API key and start pushing data.</p>
+					<p>Our most active SDKs are <a target="_blank" href="https://github.com/stretchr/sdk-js">JavaScript</a>, <a target="_blank" href="https://github.com/stretchr/sdk-ruby">Ruby</a> and <a target="_blank" href="https://github.com/stretchr/sdk-go">Go</a> - but we have many more options available on <a target="_blank" href="https://github.com/stretchr">GitHub</a>. We encourage issues, suggestions and contributions!</p>
+					</div>
+					<div class="col-sm-6">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<ul class="nav nav-pills">
+									<li class="active"><a href="#javascript" data-toggle="tab">JavaScript</a></li>
+									<li><a href="#ruby" data-toggle="tab">Ruby</a></li>
+									<li><a href="#golang" data-toggle="tab">Go</a></li>
+									<li><a href="#http" data-toggle="tab">REST</a></li>
+								</ul>
+							</div>
+							<div class="panel-body">
+								<div class="tab-content">
+									<div class="tab-pane active" id="javascript">
+<pre>stretchr = new Stretchr.Client("project.company", "key");
+
+	stretchr.at("people/1").read({
+		success: function(response){
+		alert("Hello " + response.resource().data("name"));
+	}
+});</pre>
+								</div>
+								<div class="tab-pane" id="ruby">
+<pre>stretchr = Stretchr::Client.new(
+	project: "project.company",
+	key: "key")
+
+	# GET /people/1/books
+	books = stretchr.people(1).books.get</pre>
+								</div>
+									<div class="tab-pane" id="golang">
+<pre>// make a session
+Stretchr := stretchr.NewSession("{project}", "{key}");
+
+// read a resource
+resource, _ := Stretchr.At("people/123").ReadOne()
+
+log.Printf("Just loaded %s who is %g years old.", resource.Get("name"), resource.Get("age"))</pre>
+										</div>
+										<div class="tab-pane" id="http">
+											<p>Stretchr's RESTful API allows easy development in any language, even those we don't yet support through native SDKs.</p>
+<pre># Reading ressources
+GET https://project.company.stretchr.com/api/v1.1/people/1
+
+# Creating resources
+POST https://project.company.stretchr.com/api/v1.1/people</pre>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="slice" id="future-proof">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-6 nesting-animation">
+								<div class="animation collection level-1">
+									/accounts
+								</div>
+								<div class="animation collection-id level-2">
+									/stretchr
+								</div>
+								<div class="animation collection level-3">
+									/pages
+								</div>
+								<div class="animation collection-id level-4">
+									/NoSQL-advantages
+								</div>
+								<div class="animation collection level-5">
+									/comments
+								</div>
+								<div class="animation collection level-6">
+									/pages
+								</div>
+								<div class="animation collection-id level-7">
+									/NoSQL-nesting-benefits
+								</div>
+								<div class="animation collection level-8">
+									/comments
+								</div>
+								<div class="animation collection level-9">
+									/comments
+								</div>
+								<div class="animation collection-id level-10">
+									/1
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<h2>Your data, completely future-proofed</h2>
+								<p>
+									Anyone who's worked with NoSQL before knows how easy it is to shoot yourself in the foot with schemaless data.  You'll often encounter enterprise deployments riddled with data duplication, lost relations and lost querying capabilities.
+								</p>
+								<p>
+									Stretchr's nested data model and powerful query interface let you cut and slice your data however you need for any situation.  Just send your data in as it appears in the real world and we'll keep it accessible for future development.
+								</p>
+								<a class="btn btn-danger">Read the white paper</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="slice" id="cognition">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-6">
+								<h2>Built for repurposing data</h2>
+								<p>
+									Our unique permissions system lets you layer multiple levels of permissions on your data.  Set which segments of data <em>each</em> application can access, including limitations based on which <em>user</em> is using the app.  This fine-grained control over data exposure enables new development channels such as third party development, customer-facing apps, mobile apps and web applications.  All without any additional backend development, these channels can securely connect directly to your datastack.
+								</p>
+								<p>
+									Just one example of where this becomes useful is in the development of customer dashboards and internal support applications.
+								</p>
+								<a class="btn btn-danger">Read the white paper</a>
+							</div>
+							<div class="col-sm-6 animation">
+								<div class="permissions-animation">
+									<img src="/img/permissions-1.png" class="permissions-1">
+									<img src="/img/permissions-2.png" class="permissions-2">
+									<img src="/img/permissions-3.png" class="permissions-3">
+									<img src="/img/permissions-4.png" class="permissions-4">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 	<div class="slice" id="features">
 		<div class="container">
 			<div class="row">
@@ -142,133 +275,6 @@
 		</div>
 		<div class="slice-bottom"></div>
 	</div>
-	<div class="slice" id="sdks">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-6">
-					<h2>Start developing in minutes</h2>
-					<p>Our open source SDKs in most of today's popular languages and frameworks let you get up and running in minutes.  Just generate an API key and start pushing data.</p>
-					<p>Our most active SDKs are <a target="_blank" href="https://github.com/stretchr/sdk-js">JavaScript</a>, <a target="_blank" href="https://github.com/stretchr/sdk-ruby">Ruby</a> and <a target="_blank" href="https://github.com/stretchr/sdk-go">Go</a> - but we have many more options available on <a target="_blank" href="https://github.com/stretchr">GitHub</a>. We encourage issues, suggestions and contributions!</p>
-					</div>
-					<div class="col-sm-6">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<ul class="nav nav-pills">
-									<li class="active"><a href="#javascript" data-toggle="tab">JavaScript</a></li>
-									<li><a href="#ruby" data-toggle="tab">Ruby</a></li>
-									<li><a href="#golang" data-toggle="tab">Go</a></li>
-									<li><a href="#http" data-toggle="tab">REST</a></li>
-								</ul>
-							</div>
-							<div class="panel-body">
-								<div class="tab-content">
-									<div class="tab-pane active" id="javascript">
-<pre>stretchr = new Stretchr.Client("project.company", "key");
-
-	stretchr.at("people/1").read({
-		success: function(response){
-		alert("Hello " + response.resource().data("name"));
-	}
-});</pre>
-								</div>
-								<div class="tab-pane" id="ruby">
-<pre>stretchr = Stretchr::Client.new(
-	project: "project.company",
-	key: "key")
-
-	# GET /people/1/books
-	books = stretchr.people(1).books.get</pre>
-								</div>
-									<div class="tab-pane" id="golang">
-<pre>// make a session
-Stretchr := stretchr.NewSession("{project}", "{key}");
-
-// read a resource
-resource, _ := Stretchr.At("people/123").ReadOne()
-
-log.Printf("Just loaded %s who is %g years old.", resource.Get("name"), resource.Get("age"))</pre>
-										</div>
-										<div class="tab-pane" id="http">
-											<p>Stretchr's RESTful API allows easy development in any language, even those we don't yet support through native SDKs.</p>
-<pre># Reading ressources
-GET https://project.company.stretchr.com/api/v1.1/people/1
-
-# Creating resources
-POST https://project.company.stretchr.com/api/v1.1/people</pre>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="slice" id="cognition">
-					<div class="container">
-						<div class="row">
-							<div class="col-sm-6">
-								<div class="carousel slide">
-									<ol class="carousel-indicators">
-										<li class="active" data-target="#cognition-slides" data-slide-to="0"></li>
-									</ol>
-									<div class="carousel-inner">
-										<div class="item active">
-											<div class="panel panel-default">
-												<div class="panel-heading">
-													Cognition evolves with your application
-												</div>
-												<img src="/img/greymatter-chart.png" alt="">
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6">
-								<h2>Your data, completely future-proofed</h2>
-								<p>
-									Anyone who's worked with NoSQL before knows how easy it is to shoot yourself in the foot with schemaless data.  You'll often encounter enterprise deployments riddled with data duplication, lost relations and lost querying capabilities.
-								</p>
-								<p>
-									Stretchr's nested data model and powerful query interface let you cut and slice your data however you need for any situation.  Just send your data in as it appears in the real world and we'll keep it accessible for future development.
-								</p>
-								<a class="btn btn-danger">Read the white paper</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="slice" id="cognition">
-					<div class="container">
-						<div class="row">
-							<div class="col-sm-6">
-								<h2>Built for monetizing data</h2>
-								<p>
-									Our unique permissions system lets you layer multiple levels of permissions on your data.  Set which segments of data <em>each</em> application can access, including limitations based on which <em>user</em> is using the app.  This fine-grained control over data exposure enables key monetization channels such as third party development, customer-facing apps, mobile apps and web applications.  All without any additional backend development, these channels can securely connect directly to your datastack.
-								</p>
-								<p>
-									Just one example of where this becomes useful is in the development of customer dashboards and internal support applications.
-								</p>
-								<a class="btn btn-danger">Read the white paper</a>
-							</div>
-							<div class="col-sm-6">
-								<div class="carousel slide">
-									<ol class="carousel-indicators">
-										<li class="active" data-target="#cognition-slides" data-slide-to="0"></li>
-									</ol>
-									<div class="carousel-inner">
-										<div class="item active">
-											<div class="panel panel-default">
-												<div class="panel-heading">
-													Cognition evolves with your application
-												</div>
-												<img src="/img/greymatter-chart.png" alt="">
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
 				<div class="slice" id="footer">
 					<div class="container">
 						<div class="row">
@@ -276,20 +282,6 @@ POST https://project.company.stretchr.com/api/v1.1/people</pre>
 								<p>
 									Stretchr, Inc. is a privately-held company developing an intelligent datastack for NoSQL environments.
 								</p>
-								<p>
-									To learn more, or to request early access, please let us know below.
-								</p>
-								<div class="row">
-									<!-- Begin MailChimp Signup Form -->
-									<form action="http://stretchr.us7.list-manage.com/subscribe/post?u=fc22c7fd9375424e66f835567&amp;id=dbbb5921f5" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-vertical" target="_blank" novalidate>
-										<div class="mc-field-group col-sm-7">
-											<input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL" placeholder="Email address...">
-										</div>
-										<div class="submit-container col-sm-5">
-											<input type="submit" value="Request access" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-default btn-primary btn-block">
-										</div>
-									</form>
-								</div>
 							</div>
 							<div class="col-sm-6">
 								<div class="copyright">

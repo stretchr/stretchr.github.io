@@ -8,4 +8,15 @@ $(function() {
   	githubStars("stretchr", function(stars) {
   		$(".github-stars").html(stars);
   	});
+
+  	$(window).on("scroll", function(e) {
+  		if ($(this).scrollTop() > ($("#future-proof").offset().top - 400)) {
+  			$("#future-proof .animation").addClass("active");
+  		}
+		if ($(this).scrollTop() > ($(".permissions-animation").offset().top - 400)) {
+			$(".permissions-animation").addClass("active");
+			$(window).off("scroll");
+		}
+	});
+
 });
