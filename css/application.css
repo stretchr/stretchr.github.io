@@ -24,6 +24,11 @@ a {
 	color:#fff;
 }
 
+#header .header-inner img.example {
+	margin: 0 auto;
+	width:100%;
+}
+
 #header .header-bottom {
 	bottom:0;
 	background: url(../img/w-page-top-dark.png) repeat-x center bottom;
@@ -69,6 +74,7 @@ h1 {
 	text-align:center;
 	font-size:1.5em;
 	font-weight:lighter;
+	margin-top:30px;
 	margin-bottom:50px;
 }
 
