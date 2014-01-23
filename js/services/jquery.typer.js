@@ -19,7 +19,10 @@ String.prototype.rightChars = function(n){
       typeDelay         : 200,
       clearOnHighlight  : true,
       typerDataAttr     : 'data-typer-targets',
-      typerInterval     : 2000
+      typerInterval     : 2000,
+      debug             : false,
+      tapeColor         : 'auto',
+      typerOrder        : 'random',
     },
     highlight,
     clearText,
@@ -33,6 +36,7 @@ String.prototype.rightChars = function(n){
     typeWithAttribute,
     getHighlightInterval,
     getTypeInterval,
+    intervalHandle,
     typerInterval;
 
   spanWithColor = function(color, backgroundColor) {
@@ -131,7 +135,7 @@ String.prototype.rightChars = function(n){
       .append(
         spanWithColor(
             $e.data('backgroundColor'),
-            $e.data('primaryColor')
+            $.typer.options.tapeColor === 'auto' ? $e.data('primaryColor') : $.typer.options.tapeColor
           )
           .append(highlightedText)
       )
@@ -144,25 +148,39 @@ String.prototype.rightChars = function(n){
     }, getHighlightInterval());
   };
 
-  typeWithAttribute = function ($e) {
-    var targets;
+  typeWithAttribute = (function () {
+    var last = 0;
 
-    if ($e.data('typing')) {
-      return;
+    return function($e) {
+      var targets;
+
+      if ($e.data('typing')) {
+        return;
+      }
+
+      try {
+        targets = JSON.parse($e.attr($.typer.options.typerDataAttr)).targets;
+      } catch (e) {}
+
+      if (typeof targets === "undefined") {
+        targets = $.map($e.attr($.typer.options.typerDataAttr).split(','), function (e) {
+          return $.trim(e);
+        });
+      }
+
+      if ($.typer.options.typerOrder == 'random') {
+        $e.typeTo(targets[Math.floor(Math.random()*targets.length)]);
+      }
+      else if ($.typer.options.typerOrder == 'sequential') {
+        $e.typeTo(targets[last]);
+        last = (last < targets.length - 1) ? last + 1 : 0;
+      }
+      else {
+        console.error("Type order of '" + $.typer.options.typerOrder + "' not supported");
+        clearInterval(intervalHandle);
+      }
     }
-
-    try {
-      targets = JSON.parse($e.attr($.typer.options.typerDataAttr)).targets;
-    } catch (e) {}
-
-    if (typeof targets === "undefined") {
-      targets = $.map($e.attr($.typer.options.typerDataAttr).split(','), function (e) {
-        return $.trim(e);
-      });
-    }
-
-    $e.typeTo(targets[Math.floor(Math.random()*targets.length)]);
-  };
+  })();
 
   // Expose our options to the world.
   $.typer = (function () {
@@ -186,7 +204,7 @@ String.prototype.rightChars = function(n){
       }
 
       typeWithAttribute($e);
-      setInterval(function () {
+      intervalHandle = setInterval(function () {
         typeWithAttribute($e);
       }, typerInterval());
     });
@@ -200,11 +218,16 @@ String.prototype.rightChars = function(n){
       j = 0;
 
     if (currentText === newString) {
+      if ($.typer.options.debug === true) {
+        console.log("Our strings our equal, nothing to type");
+      }
       return $e;
     }
 
     if (currentText !== $e.html()) {
-      console.error("Typer does not work on elements with child elements.");
+      if ($.typer.options.debug === true) {
+        console.error("Typer does not work on elements with child elements.");
+      }
       return $e;
     }
 
@@ -225,7 +248,7 @@ String.prototype.rightChars = function(n){
       oldRight: currentText.rightChars(j - 1),
       leftStop: i,
       rightStop: currentText.length - j,
-      primaryColor: $e.css('color'),
+      primaryColor: $.typer.options.tapeColor === 'auto' ? $e.data('primaryColor') : $.typer.options.tapeColor,
       backgroundColor: $e.css('background-color'),
       text: newString
     });
