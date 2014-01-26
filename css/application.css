@@ -10,7 +10,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .highlight {
 	font-family: 'Indie Flower', cursive;
-, .h1, .h2, .h3, .h4, .h5, .h6}
+}
 
 a {
 	color:#428bca;
@@ -27,6 +27,7 @@ a {
 #header .header-inner img.example {
 	margin: 0 auto;
 	width:100%;
+	opacity:.25;
 }
 
 #header .header-bottom {
@@ -78,11 +79,26 @@ h1 {
 	margin-bottom:50px;
 }
 
+#header .sub-header h3, #header .sub-header h4 {
+	text-align:left;
+	display:inline-block;
+	margin:20px 10px;
+	margin-bottom:50px;
+}
+
 .stretchr-logo {
   height: 1.05em;
   vertical-align: bottom;
   position: absolute;
   margin-left: -1.5em;
+}
+
+#logo a {
+	color:#fff;
+}
+
+#logo a:hover {
+	text-decoration: none;
 }
 
 /*-------- CALL TO ACTION ----------*/
@@ -102,7 +118,7 @@ h1 {
 
 #features {
 	background:#f1f1f1;
-  padding-top: 10px;
+	padding-top: 10px;
 }
 
 #features .feature {
@@ -118,15 +134,6 @@ h1 {
 	color:#000;
 	font-size: 1.7em;
 	text-align: center;
-}
-
-#footer {
-	background:#303030;
-	color:#bbb;
-}
-
-#footer .copyright {
-  color: #888;
 }
 
 #sdks {
@@ -179,6 +186,7 @@ pre {
 
 #testimonial {
 	background: #fff;
+	box-shadow: 0  0 5px #000;
 }
 
 #testimonial .testimonial-intro {
@@ -295,11 +303,41 @@ pre {
 .active.level-10 {
 	margin-left:15%;
 }
+
+/*----- Whitepapers ------*/
+
+.whitepaper-section {
+	border-bottom: 1px solid #f1f1f1;
+	padding: 20px 0;
+}
+
+.cover-container {
+	text-align:center;
+}
+
+img.cover {
+	margin: 0 auto;
+	width:300px;
+	border: 3px solid #e8e8e8;
+}
+
+
 /*---- FOOTER ----*/
 
 .copyright {
 	text-align:right;
 }
+
+#footer {
+	background:#303030;
+	color:#bbb;
+}
+
+#footer .copyright {
+  color: #888;
+}
+
+/* Mobile */
 
 @media only screen
 and (min-device-width : 320px)
