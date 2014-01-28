@@ -10,7 +10,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .highlight {
 	font-family: 'Indie Flower', cursive;
-, .h1, .h2, .h3, .h4, .h5, .h6}
+}
 
 a {
 	color:#428bca;
@@ -19,23 +19,39 @@ a {
 /*------- HEADER --------*/
 
 #header {
-	background: url(../img/header1.jpg) no-repeat center center;
+	background: url(../img/stretchr-back.png) #1b75bb no-repeat bottom center;
+	color:#fff;
 	background-size: cover;
 }
 
 #header .header-bottom {
 	bottom:0;
 	background: url(../img/w-page-top-dark.png) repeat-x center bottom;
-	height:50px;
+	height:30px;
+	z-index:1000;
 	width:100%;
 }
 
 #header .header-inner {
-  height: 400px;
+	padding-bottom:0;
+	min-height:500px;
 }
+
+.resources #header .header-inner {
+	min-height: 0;
+}
+
+.resources #header {
+	background-image: url(../img/stretchr-back-small.png);
+}
+
+#header .form-container {
+	text-align:center;
+	margin:30px 0;
+}
+
 #header .header-inner .container {
   padding-top: 20px;
-  text-align: left;
 }
 
 #header h2 {
@@ -58,17 +74,24 @@ h1 {
 
 #header h3 {
 	text-align:center;
+	font-weight:lighter;
 	font-size:3.5em;
-	margin-top:1.5em;
-	text-shadow: 0 0 2px #fff;
-	font-weight:bolder;
+	margin-top:5px;
 }
 
 #header h4 {
 	text-align:center;
-	font-size:2.5em;
-	text-shadow: 0 0 2px #fff;
-	font-weight:bold;
+	font-size:1.5em;
+	font-weight:lighter;
+	margin-top:30px;
+	margin-bottom:50px;
+}
+
+#header .sub-header h3, #header .sub-header h4 {
+	text-align:left;
+	display:inline-block;
+	margin:20px 10px;
+	margin-bottom:50px;
 }
 
 .stretchr-logo {
@@ -78,24 +101,32 @@ h1 {
   margin-left: -1.5em;
 }
 
+#logo a {
+	color:#fff;
+}
+
+#logo a:hover {
+	text-decoration: none;
+}
+
 /*-------- CALL TO ACTION ----------*/
 #call-to-action {
 	background:#303030;
 	color:#fff;
-	padding-top:20px;
-	padding-bottom:40px;
+	padding: 40px 0;
+	margin-top:0;
 }
 
 .call-to-action-text {
-	text-align:right;
+	text-align:center;
 }
 
 
 /*------------ FEATURES -------------*/
 
 #features {
-	color:#f1f1f1;
-  padding-top: 10px;
+	background:#f1f1f1;
+	padding-top: 10px;
 }
 
 #features .feature {
@@ -113,17 +144,8 @@ h1 {
 	text-align: center;
 }
 
-#footer {
-	background:#303030;
-	color:#bbb;
-}
-
-#footer .copyright {
-  color: #888;
-}
-
 #sdks {
-	background:#efefef;
+	background:#f1f1f1;
 	color:#303030;
 }
 
@@ -162,17 +184,168 @@ pre {
 }
 
 .section-highlight .title {
-	line-height:72px;
+	line-height:72px;	
 	padding:0;
 	margin:0;
 	font-size:34px;
 }
+
+/*----- Testimonial -----*/
+
+#testimonial {
+	background: #fff;
+	box-shadow: 0  0 5px #000;
+}
+
+#testimonial .testimonial-intro {
+	text-align:center;
+}
+
+#testimonial .testimonial-logo {
+	width:100%;
+}
+
+#testimonial .quote {
+	font-size:22px;
+	line-height:33px;
+	font-weight:bold;
+	padding:40px 15px 15px 50px;
+	background: url(../img/quotes.png) no-repeat top left;
+}
+
+#testimonial .attribution {
+	padding-left:50px;
+	color:#777;
+}
+
+/*----- animations -------*/
+
+.permissions-animation img {
+	position:absolute;
+	transition:All 1s;
+	-webkit-transition:All 1s;
+	-moz-transition:All 1s;
+	-o-transition:All 1s;
+	top:0;
+	right:50px;
+	width:400px;
+}
+
+.animation {
+	transition:All 1s;
+	-webkit-transition:All 1s;
+	-moz-transition:All 1s;
+	-o-transition:All 1s;
+}
+
+.permissions-animation .permissions-4{
+	transform: rotate(-100deg);
+	-webkit-transform: rotate(-100deg);
+	-moz-transform: rotate(-100deg);
+}
+
+.permissions-animation .permissions-2{
+	transform: rotate(88deg);
+	-webkit-transform: rotate(88deg);
+	-moz-transform: rotate(88deg);
+}
+.permissions-animation .permissions-3{
+	transform: rotate(-65deg);
+	-webkit-transform: rotate(-65deg);
+	-moz-transform: rotate(-65deg);
+}
+
+.permissions-animation.active img {
+	transform: rotate(0deg);
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+}
+
+/*word drop*/
+
+.nesting-animation {
+	padding-top:20px;
+}
+.collection, .collection-id {
+	font-size: 22px;
+	line-height:35px;
+	font-weight:bolder;
+}
+
+.level-1, .level-2 {
+	color: #00a550;
+}
+
+.level-3, .level-4, .level-6, .level-7 {
+	color: #652c90;
+}
+
+.level-5, .level-8, .level-9, .level-10 {
+	color: #ec008b;
+}
+
+.active.level-2 {
+	margin-left: 15%;
+}
+
+.active.level-3 {
+	margin-left: 30%
+}
+
+.active.level-4 {
+	margin-left: 45%;
+}
+
+.active.level-5 {
+	margin-left: 60%;
+}
+
+.active.level-7 {
+	margin-left:15%;
+}
+
+.active.level-8 {
+	margin-left:30%;
+}
+
+.active.level-10 {
+	margin-left:15%;
+}
+
+/*----- Whitepapers ------*/
+
+.whitepaper-section {
+	border-bottom: 1px solid #f1f1f1;
+	padding: 20px 0;
+}
+
+.cover-container {
+	text-align:center;
+}
+
+img.cover {
+	margin: 0 auto;
+	width:300px;
+	border: 3px solid #e8e8e8;
+}
+
 
 /*---- FOOTER ----*/
 
 .copyright {
 	text-align:right;
 }
+
+#footer {
+	background:#303030;
+	color:#bbb;
+}
+
+#footer .copyright {
+  color: #888;
+}
+
+/* Mobile */
 
 @media only screen
 and (min-device-width : 320px)
