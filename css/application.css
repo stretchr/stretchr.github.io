@@ -16,97 +16,102 @@ a {
 	color:#428bca;
 }
 
+.slice-header {
+	text-align:center;
+	font-size:30px;
+	color: #303030;
+	font-weight:bolder;
+}
+
+.slice-subheader {
+	text-align:center;
+	font-size:20px;
+	color:#999;
+	font-weight:normal;
+}
+
+.btn-default {
+	background: #3a92cf;
+	color: #fff;
+	border: none;
+}
+
+.btn-default:hover {
+	background: #377dbc;
+	color:#fff;
+}
+
 /*------- HEADER --------*/
 
 #header {
-	background: url(../img/stretchr-back.png) #1b75bb no-repeat bottom center;
+	background: #303030;
 	color:#fff;
-	background-size: cover;
+	overflow:hidden;
 }
 
-#header .header-bottom {
-	bottom:0;
-	background: url(../img/w-page-top-dark.png) repeat-x center bottom;
-	height:30px;
-	z-index:1000;
-	width:100%;
+#header .nav {
+	padding:10px;
 }
 
-#header .header-inner {
-	padding-bottom:0;
-	min-height:500px;
+#header .nav a {
+	color:#f1f1f1;
 }
 
-.resources #header .header-inner {
-	min-height: 0;
+#header .nav a:hover {
+	background:#404040;
 }
 
-.resources #header {
-	background-image: url(../img/stretchr-back-small.png);
+#header .nav .active a {
+	background:#404040;
 }
 
-#header .form-container {
+#header .logo {
+  height:30px;
+  margin:20px 0;
+}
+
+
+/*-------- Intro ---------*/
+#intro {
+	background:#101010 url(../img/header-dark.jpg) no-repeat center bottom;
+	min-height:700px;
+}
+
+#intro h2 {
 	text-align:center;
-	margin:30px 0;
+	color:#f1f1f1;
+	font-size:70px;
+	margin-top:50px;
+	font-weight:bolder;
 }
 
-#header .header-inner .container {
-  padding-top: 20px;
+#intro h4 {
+	text-align:center;
+	color:#999;
+	font-size:30px;
 }
 
-#header h2 {
+#intro .cta {
+	text-align:center;
+	padding:50px 0;
+}
+
+#intro .cta .btn {
+	padding:20px 40px;
+	border-bottom:3px solid darkred;
+	height:65px;
+}
+
+#intro .cta .input-lg {
+	padding:20px 40px;
+	line-height:50px;
+	height:65px;
+}
+
+#intro .bottom-text {
+	padding:50px 0;
+	text-align:center;
 	color:#777;
-}
-
-#header h2 .rotator {
-	color:#383838;
-}
-
-h1 {
-  font-size: 32px;
-  letter-spacing: -0.05em;
-  padding-left: 1.5em;
-}
-
-#header h2 {
-  text-align: right;
-}
-
-#header h3 {
-	text-align:center;
-	font-weight:lighter;
-	font-size:3.5em;
-	margin-top:5px;
-}
-
-#header h4 {
-	text-align:center;
-	font-size:1.5em;
-	font-weight:lighter;
-	margin-top:30px;
-	margin-bottom:50px;
-}
-
-#header .sub-header h3, #header .sub-header h4 {
-	text-align:left;
-	display:inline-block;
-	margin:20px 10px;
-	margin-bottom:50px;
-}
-
-.stretchr-logo {
-  height: 1.05em;
-  vertical-align: bottom;
-  position: absolute;
-  margin-left: -1.5em;
-}
-
-#logo a {
-	color:#fff;
-}
-
-#logo a:hover {
-	text-decoration: none;
 }
 
 /*-------- CALL TO ACTION ----------*/
@@ -121,28 +126,95 @@ h1 {
 	text-align:center;
 }
 
+/*--------- Getting Started ---------*/
+
+#getting-started {
+	background:#f9f9f9;
+}
+
+#getting-started .step-container {
+	text-align:center;
+	margin:20px 0;
+	position:relative;
+}
+#getting-started .step-container img {
+	width:300px;
+	margin:0 auto;
+	z-index:100;
+	position:relative;
+}
+
+#getting-started .step h3 {
+	text-align:left;
+	font-size:30px;
+	margin-top:100px;
+}
+
+#getting-started .step.step-right {
+	text-align:right;
+}
+
+#getting-started .step.step-right h3 {
+	text-align:right;
+}
+
+#getting-started .step-container img.dotted-right {
+	position:absolute;
+	width:auto;
+	top:150px;
+	left:220px;
+	z-index: 1;
+}
+
+#getting-started .step-container img.dotted-left {
+	position:absolute;
+	width:auto;
+	top:150px;
+	right:220px;
+	z-index: 1;
+}
+
+#difference .features {
+	text-align:center;
+	margin:50px 0;
+}
+
+#difference .features h4 {
+	font-weight:bold;
+}
+
+#difference .features p {
+	color:#999;
+}
+
+#difference .features img {
+	width:200px;
+}
+
+/*----------- Easy Section ----------*/
+#signup {
+	background:#f9f9f9;
+}
+
+#signup form {
+	margin: 50px 0;
+}
+
+#signup .btn {
+	border-bottom: 3px solid darkred;
+}
+
+/*--------- example -----------*/
+#example {
+	background:#404040;
+}
+
+#example .slice-header {
+	color:#f1f1f1;
+}
+
 
 /*------------ FEATURES -------------*/
-
-#features {
-	background:#f1f1f1;
-	padding-top: 10px;
-}
-
-#features .feature {
-	padding:15px;
-	color:#000;
-	min-height: 200px;
-	text-align:center;
-	margin: 10px 0;
-}
-
-#features .action {
-	padding-top: 10px;
-	color:#000;
-	font-size: 1.7em;
-	text-align: center;
-}
 
 #sdks {
 	background:#f1f1f1;
@@ -162,32 +234,8 @@ pre {
 }
 
 .slice {
-	margin-top:-10px;
-	padding:50px 0;
+	padding:40px 0;
 	position:relative;
-}
-
-.slice-bottom {
-	height:20px;
-	position:absolute;
-	bottom:0;
-	width:100%;
-	background: url(../img/shadow-btm.png) no-repeat bottom center;
-}
-
-.section-highlight {
-	text-align:center;
-}
-
-.section-highlight h2 {
-	margin:40px 0;
-}
-
-.section-highlight .title {
-	line-height:72px;	
-	padding:0;
-	margin:0;
-	font-size:34px;
 }
 
 /*----- Testimonial -----*/
@@ -264,24 +312,28 @@ pre {
 /*word drop*/
 
 .nesting-animation {
-	padding-top:20px;
+	padding-top:0px;
 }
 .collection, .collection-id {
-	font-size: 22px;
-	line-height:35px;
-	font-weight:bolder;
+	font-size: 14px;
+	font-weight:bold;
+	padding:2px 10px;
+	color: #fff;
+	display:inline-block;
+	border-radius:5px;
+	margin:2px 0;
 }
 
 .level-1, .level-2 {
-	color: #00a550;
+	background: #00a79d;
 }
 
 .level-3, .level-4, .level-6, .level-7 {
-	color: #652c90;
+	background: #c69bc7;
 }
 
 .level-5, .level-8, .level-9, .level-10 {
-	color: #ec008b;
+	background: #ee999a;
 }
 
 .active.level-2 {
@@ -314,9 +366,17 @@ pre {
 
 /*----- Whitepapers ------*/
 
+.resources #intro {
+	min-height:350px;
+}
+
 .whitepaper-section {
 	border-bottom: 1px solid #f1f1f1;
 	padding: 20px 0;
+}
+
+.whitepaper-section:last-child {
+	border-bottom:none;
 }
 
 .cover-container {
@@ -337,39 +397,53 @@ img.cover {
 }
 
 #footer {
-	background:#303030;
-	color:#bbb;
+	background:#f9f9f9;
+	color:#404040;
 }
 
 #footer .copyright {
-  color: #888;
+  color: #999;
+}
+
+#footer a {
+	color:#404040;
 }
 
 /* Mobile */
 
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 568px) {
-	#header h1, #header h2 {
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
+
+	#header {
 		text-align:center;
 	}
 
-	#header h3 {
-		font-size:2em;
-		text-shadow: none;
-		margin:0;
+	#intro {
+		min-height:500px;
 	}
 
-	#header h4 {
-		font-size:1.5em;
-		text-shadow: none;
+	#intro .cta {
+		padding:10px 0;	
 	}
 
-	#header .header-text {
-		background: rgba(0, 0, 0, .5);
-		color:#fff;
-		padding:20px 0;
-		margin-top:20px;
+	#intro h2 {
+		font-size:40px;
+	}
+
+	#intro h4 {
+		font-size:25px;
+	}
+
+	#getting-started .step, #getting-started .step.step-right, #getting-started .step h3, #getting-started .step.step-right h3 {
+		margin:10px 0;
+	}
+
+	
+	#getting-started .step-container img  {
+		width:100%;
+	}
+
+	#getting-started .step h3 {
+		font-size:20px;
 	}
 }
 
