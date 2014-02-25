@@ -44,7 +44,7 @@ a {
 /*------- HEADER --------*/
 
 #header {
-	background: #303030;
+	background: #202020;
 	color:#fff;
 	overflow:hidden;
 }
@@ -89,7 +89,7 @@ a {
 	text-align:center;
 	color:#999;
 	font-size:30px;
-	margin-top:25px;
+	margin-top:45px;
 }
 
 #intro .cta {
