@@ -98,13 +98,13 @@ a {
 }
 
 #intro .cta .btn {
-	padding:20px 40px;
+	padding:20px 20px;
 	border-bottom:3px solid darkred;
 	height:65px;
 }
 
 #intro .cta .input-lg {
-	padding:20px 40px;
+	padding:20px 20px;
 	line-height:50px;
 	height:65px;
 }

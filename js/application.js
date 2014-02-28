@@ -1,9 +1,21 @@
+var stretchr = new Stretchr.Client("stretchr", "demo-invite", "d23e580f5cba40b895d331e09197ace2");
+
 $(function() {
-	$.typer.options.typerInterval = 3500;
-	$.typer.options.clearDelay = 750;
-	$.typer.options.typeSpeed = 100;
-	$.typer.options.tapeColor = "#383838"
-	$(".typer").typer();
+
+	$(".demo-invite").submit(function(e) {
+		e.preventDefault();
+		var t = $(e.currentTarget),
+			d = t.formalizeData();
+		stretchr.at("invites").create(d, {
+			success: function(response) {
+				t.find(".response").html("<div class='alert alert-danger'>Thank you for your interest, we'll get back with you shortly!</div>");
+				t.get(0).reset();
+			},
+			error: function(response) {
+				t.find(".response").html("<div class='alert alert-danger'>Uh oh, looks like there was an issue submitting your request, please try again</div>");
+			}
+		})
+	});
 
   	githubStars("stretchr", function(stars) {
   		$(".github-stars").html(stars);
