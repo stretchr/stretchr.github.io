@@ -115,6 +115,17 @@ a {
 	color:#777;
 }
 
+#intro .continue {
+	position:fixed;
+	bottom:0;
+	width:100%;
+	text-align:center;
+	background:#202020;
+	color:#f9f9f9;
+	padding:20px;
+	font-weight:bold;
+}
+
 /*-------- CALL TO ACTION ----------*/
 #call-to-action {
 	background:#303030;
@@ -237,6 +248,7 @@ pre {
 .slice {
 	padding:40px 0;
 	position:relative;
+	background:#fff;
 }
 
 /*----- Testimonial -----*/
