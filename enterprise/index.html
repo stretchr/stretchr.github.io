@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Stretchr</title>
+	<title>Stretchr - Ship products faster on NoSQL</title>
 	<link rel="stylesheet" href="/css/bootstrap.min.css">
 	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300, 400|Indie+Flower" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="/css/application.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1, max-scale=1">
+	<meta name="description" content="Stretchr lets you ship products faster on NoSQL by removing the need for most backend and API development">
 </head>
 <body>
 	<div id="header">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-6">
-					<img src="/img/stretchr-logo-text.png" class="logo">
+				<div class="col-sm-3">
+					<a href="/"><img src="/img/stretchr-logo-text.png" class="logo"></a>
 				</div>
-				<div class="col-sm-6">
+				<div class="col-sm-9">
 					<ul class="nav nav-pills pull-right">
 						<li><a href="/">Cloud</a></li>
 						<li class="active"><a href="/enterprise">Enterprise</a></li>
@@ -28,19 +29,29 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
-					<h2>Stop worrying about your data</h2>
-					<h4>Start deciding what to do with it</h4>
+					<h2>Ship Products Faster</h2>
+					<h4>Radically simplified development in a NoSQL environment</h4>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-sm-6 col-sm-offset-3">
+				<div class="col-md-10 col-md-offset-1">
 					<div class="cta">
-						<form class="row">
-							<div class="form-group col-sm-8">
-								<input type="text" class="form-control input-lg" placeholder="Email address">
+						<form class="demo-invite">
+							<div class="response"></div>
+							<div class="col-md-5">
+								<div class="form-group">
+									<input type="email" name="email" class="form-control input-lg"placeholder="Email">
+								</div>
 							</div>
-							<div class="form-group col-sm-4">
-								<button class="btn btn-lg btn-danger">Schedule Demo</button>
+							<div class="col-md-4">
+								<div class="form-group">
+									<input type="text" class="form-control input-lg" name="phone" placeholder="Phone (optional)">
+								</div>
+							</div>
+							<div class="submit-container col-md-3">
+								<div class="form-group">
+									<input type="submit" value="Request Demo" name="subscribe" id="mc-embedded-subscribe" class="btn  btn-danger btn-lg btn-block">
+								</div>
 							</div>
 						</form>
 					</div>
@@ -49,11 +60,12 @@
 			<div class="row">
 				<div class="col-sm-6 col-sm-offset-3">
 					<div class="bottom-text">
-						Ship new products faster, repurpose and monetize existing data and get control of your enterprise's growing data needs
+						Stretchr removes the need for most api and backend development, allowing developers to focus on releasing awesome products.
 					</div>
 				</div>
 			</div>
 		</div>
+		<div class="continue"><span class="glyphicon glyphicon-arrow-down"></span> Learn More</div>
 	</div>
 	<div class="slice" id="testimonial">
 		<div class="container">
@@ -75,12 +87,11 @@
 			</div>
 		</div>
 	</div>
-	
-	<div class="slice" id="difference">
+	<div class="slice enterprise-difference" id="difference">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
-					<h3 class="slice-header">Why we're the best</h3>
+					<h3 class="slice-header">Unleash your Development</h3>
 					<h4 class="slice-subheader">Just some of the powerful features built into your new datastack</h4>
 				</div>
 			</div>
@@ -88,22 +99,157 @@
 				<div class="col-sm-3">
 					<img src="/img/search.png" class="feature-image">
 					<h4>Querying & Search</h4>
-					<p>Advanced querying based on any attribute of your data means you'll always have access to just the right piece of info for any situation</p>
+					<p>Advanced querying based on any attribute of your data means you'll always have access to just the right piece of info for any app</p>
 				</div>
 				<div class="col-sm-3">
 					<img src="/img/users.png" class="feature-image">
 					<h4>Users & Permissions</h4>
-					<p>Oauth and custom auth built are right into the core.  Fine-grained permissions let you limit access by app, user and anything else in your data</p>
+					<p>Oauth and custom auth are built right into the core.  Build internal & customer facing apps without any fear of data exposure</p>
 				</div>
 				<div class="col-sm-3">
 					<img src="/img/nesting-model.png" class="feature-image">
 					<h4>NoSQL & Relations</h4>
-					<p>Nested NoSQL let's you define your data using the same relations you'll see in the real world.  Then we'll let you access it at any level of detail you need</p>
+					<p>Preserve complex real-world relationships between unstructured data without any additional effort.  We'll keep it accessible</p>
 				</div>
 				<div class="col-sm-3">
 					<img src="/img/permissions-small.png" class="feature-image">
 					<h4>Unlimited App Keys</h4>
 					<p>Data can be secured using both app <em>and</em> user keys, meaning different apps can be built for different audiences without fear of exposing sensitive data</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="slice" id="future-proof">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 nesting-animation">
+					<div class="collection-container">
+						<div class="animation collection level-1">
+							/accounts
+						</div>
+					</div>
+					<div class="collection-container">
+						<div class="animation collection-id level-2">
+							/stretchr
+						</div>
+					</div>
+					<div class="collection-container">
+						<div class="animation collection level-3">
+							/pages
+						</div>
+					</div>
+					<div class="collection-container">
+						<div class="animation collection-id level-4">
+							/NoSQL-advantages
+						</div>
+					</div>
+					<div class="collection-container">
+						<div class="animation collection level-5">
+							/comments
+						</div>
+					</div>
+					<div class="collection-container">
+						<div class="animation collection level-6">
+							/pages
+						</div>
+					</div>
+					<div class="collection-container">
+						<div class="animation collection-id level-7">
+							/NoSQL-nesting-benefits
+						</div>
+					</div>
+					<div class="collection-container">
+						<div class="animation collection level-8">
+							/comments
+						</div>
+					</div>
+					<div class="collection-container">
+						<div class="animation collection level-9">
+							/comments
+						</div>
+					</div>
+					<div class="collection-container">
+						<div class="animation collection-id level-10">
+							/1
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<h2>Your data, completely future-proofed</h2>
+					<p>
+						Anyone who's worked with NoSQL before knows how easy it is to shoot yourself in the foot with schemaless data.  You'll often encounter enterprise deployments riddled with data duplication, lost relations and lost querying capabilities.
+					</p>
+					<p>
+						Stretchr's nested data model and powerful query interface let you cut and slice your data however is required for any situation.  Just send the data in its original format, we'll keep it accessible for future development.
+					</p>
+					<a class="btn btn-default btn-lg" href="#whitepaper">Read the white paper</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="slice" id="cognition">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					<h2>Built for repurposing data</h2>
+					<p>
+						Our unique permissions system lets you layer multiple levels of permissions on your data.  Set which segments of data <em>each</em> application can access, including limitations based on which <em>user</em> is using that app.  This fine-grained control over data exposure enables new development channels such as third party development, customer-facing apps, mobile apps and web applications.  All without any additional backend development, these channels can securely connect directly to your datastack.
+					</p>
+					<p>
+						Just one example of where this becomes useful is in the development of customer dashboards and internal support applications.
+					</p>
+					<a class="btn btn-default btn-lg" href="#whitepaper">Read the white paper</a>
+				</div>
+				<div class="col-sm-6 animation">
+					<div class="permissions-animation">
+						<img src="/img/permissions-1.png" class="permissions-1">
+						<img src="/img/permissions-2.png" class="permissions-2">
+						<img src="/img/permissions-3.png" class="permissions-3">
+						<img src="/img/permissions-4.png" class="permissions-4">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="slice" id="whitepaper">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<h3 class="slice-header">Whitepapers</h3>
+					<h4 class="slice-subheader">Information and Case Studies about Stretchr</h4>
+				</div>
+			</div>
+			<div class="row whitepaper-section">
+				<div class="col-sm-5 cover-container">
+					<img src="/img/stretchr-intro-cover.png" class="cover">
+				</div>
+				<div class="col-sm-7">
+					<h2>An Introduction to Stretchr</h2>
+					<p>Stretchr is an intelligent datastack that radically reshapes big data application development in a NoSQL environment</p>
+					<h3>What's inside</h3>
+					<ul>
+						<li>The NoSQL impact on the General Purpose Database Industry</li>
+						<li>Stretchr Overview</li>
+						<li>Customer Dashboards - a use case of Stretchr</li>
+					</ul>
+					<a class="btn btn-lg btn-default" href="/resources/stretchr-intro.pdf">Read Now</a>
+				</div>
+			</div>
+			<div class="row whitepaper-section">
+				<div class="col-sm-5 cover-container">
+					<img src="/img/stretchr-logging.png" class="cover">
+				</div>
+				<div class="col-sm-7">
+					<h2>Logging with Stretchr</h2>
+					<p>The intelligent datastack impact on log strategy</p>
+					<h3>What's inside</h3>
+					<ul>
+						<li>The importance of a log strategy</li>
+						<li>Log collection, querying and reporting</li>
+						<li>Scaling your solution</li>
+						<li>Increasing the value of your logs through application development</li>
+					</ul>
+					<a class="btn btn-lg btn-default" href="/resources/stretchr-logging.pdf">Read Now</a>
 				</div>
 			</div>
 		</div>
@@ -117,13 +263,23 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-sm-6 col-sm-offset-3">
-					<form action="http://stretchr.us7.list-manage.com/subscribe/post?u=fc22c7fd9375424e66f835567&amp;id=dbbb5921f5" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate row" target="_blank" novalidate="">
-						<div class="mc-field-group col-sm-8">
-							<input type="email" value="" name="EMAIL" class="required email form-control input-lg" id="mce-EMAIL" placeholder="Email address...">
+				<div class="col-md-10 col-md-offset-1">
+					<form class="demo-invite">
+						<div class="response"></div>
+						<div class="col-md-5">
+							<div class="form-group">
+								<input type="email" name="email" class="form-control input-lg"placeholder="Email">
+							</div>
 						</div>
-						<div class="submit-container col-sm-4">
-							<input type="submit" value="Request Access" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-default btn-danger btn-block input-lg">
+						<div class="col-md-4">
+							<div class="form-group">
+								<input type="text" class="form-control input-lg" name="phone" placeholder="Phone (optional)">
+							</div>
+						</div>
+						<div class="submit-container col-md-3">
+							<div class="form-group">
+								<input type="submit" value="Request Demo" name="subscribe" id="mc-embedded-subscribe" class="btn  btn-danger btn-lg btn-block">
+							</div>
 						</div>
 					</form>
 				</div>
@@ -143,6 +299,11 @@
 						<p>
 							<a href="https://github.com/stretchr">We <3 Open Source, <span class="github-stars"></span> stars on github.</a>
 						</p>
+						<p>
+							<a href="http://www.rackspace.com"><img src="/img/rackspace.png"></a>
+							 
+							<a href="https://mixpanel.com/f/partner"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>
+						</p>
 					</div>
 				</div>
 			</div>
@@ -150,8 +311,9 @@
 	</div>
 	<script src="/js/services/jquery-2.0.min.js"></script>
 	<script src="/js/services/bootstrap.min.js"></script>
-	<script src="/js/services/jquery.typer.js"></script>
 	<script src="/js/services/github-stars.js"></script>
+	<script src="/js/services/stretchr.min.js"></script>
+	<script type="text/javascript" src="/js/services/formalizedata.js"></script>
 
 	<script src="/js/application.js"></script>
 	<script>

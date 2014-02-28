@@ -70,6 +70,10 @@ a {
   margin:20px 0;
 }
 
+.btn-login {
+	background:#303030;
+}
+
 
 /*-------- Intro ---------*/
 #intro {
@@ -203,6 +207,10 @@ a {
 	width:200px;
 }
 
+#difference.enterprise-difference {
+	background:#f9f9f9;
+}
+
 /*----------- Easy Section ----------*/
 #signup {
 	background:#f9f9f9;
@@ -214,6 +222,11 @@ a {
 
 #signup .btn {
 	border-bottom: 3px solid darkred;
+}
+
+#signup .signup {
+	text-align:center;
+	padding:20px 0;
 }
 
 /*--------- example -----------*/
@@ -378,6 +391,10 @@ pre {
 }
 
 /*----- Whitepapers ------*/
+
+#whitepaper {
+	background:#f9f9f9;
+}
 
 .resources #intro {
 	min-height:350px;
