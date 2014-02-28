@@ -8,7 +8,7 @@ $(function() {
 			d = t.formalizeData();
 		stretchr.at("invites").create(d, {
 			success: function(response) {
-				t.find(".response").html("<div class='alert alert-danger'>Thank you for your interest, we'll get back with you shortly!</div>");
+				t.find(".response").html("<div class='alert alert-danger'>Thanks for your interest - a member of our team will contact you within 24 hours to get you signed up</div>");
 				t.get(0).reset();
 			},
 			error: function(response) {
